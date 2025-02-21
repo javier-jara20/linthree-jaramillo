@@ -1,0 +1,104 @@
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff7eb3, #ff758c, #42a5f5, #21d4fd);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #49eb34;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff6b6b, #f94d94);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.link i {
+  font-size: 1.5rem;
+}
+
+.link:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos específicos por red social */
+.facebook { background: linear-gradient(45deg, #3b5998, #8b9dc3); }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.twitter { background: linear-gradient(45deg, #1da1f2, #0e71c8); }
+.tiktok { background: linear-gradient(45deg, #69c9d0, #ee1d52, #f4af1d); }
+.linkedin { background: linear-gradient(45deg, #0077b5, #005582); }
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .title {
+      font-size: 2rem;
+  }
+
+  .link {
+      font-size: 1rem;
+      padding: 12px 20px;
+  }
+
+  .link i {
+      font-size: 1.2rem;
+  }
+}
+
+/* Animación de texto */
+.texto {
+  font-size: 35px;
+  animation: rotar 3s infinite ease-in-out;
+  color: deeppink;
+  text-transform: uppercase;
+}
+
+@keyframes rotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
