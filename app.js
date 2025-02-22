@@ -5,7 +5,7 @@ links.forEach(link => {
   link.addEventListener('click', (event) => {
     event.preventDefault(); // Evita que el enlace se abra antes del confirm()
 
-    let confirmacion = confirm('Gracias por visitar el enlace de ${link.innerText}');
+    let confirmacion = confirm(`Gracias por visitar el enlace de ${link.innerText}`);
 
     if (confirmacion) {
       alert('¡Gracias por seguir el enlace! 😊');
@@ -16,9 +16,9 @@ links.forEach(link => {
   });
 });
 
-// Animación de rebote
-document.head.insertAdjacentHTML('beforeend', `
-<style>
+// Agregar animación de rebote al head
+const style = document.createElement('style');
+style.innerHTML = `
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -30,11 +30,13 @@ document.head.insertAdjacentHTML('beforeend', `
     transform: translateY(-5px);
   }
 }
-</style>
-`);
+`;
+document.head.appendChild(style);
 
-// Evento en el título
+// Evento en el título con validación
 let title = document.getElementById('title');
-title.addEventListener('click', () => {
-  alert('¡Has cliqueado el título!');
-});
+if (title) {
+  title.addEventListener('click', () => {
+    alert('¡Has cliqueado el título!');
+  });
+}
