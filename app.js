@@ -72,6 +72,11 @@ document.head.insertAdjacentHTML('beforeend', `
     .bounce {
       animation: bounce 0.6s;
     }
+
+    .particle {
+      position: absolute;
+      pointer-events: none;
+    }
   </style>
 `);
 
@@ -90,8 +95,6 @@ links.forEach(link => {
     link.classList.add('bounce');
     setTimeout(() => link.classList.remove('bounce'), 600);
 
-
-    const confirmacion = confirm(`Gracias por visitar el enlace de ${link.innerText}`);
     if (confirmacion) {
       alert('¡Gracias por seguir el enlace! 😊');
       window.location.href = link.href;
@@ -103,7 +106,6 @@ links.forEach(link => {
 
 // Evento en el título
 let title = document.getElementById('title');
-const title = document.getElementById('title');
 if (title) {
   title.addEventListener('click', () => {
     alert('¡Has cliqueado el título!');
@@ -164,11 +166,9 @@ document.addEventListener('click', (e) => {
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 600);
 });
-//mensaje 
+
+// mensaje 
 setInterval(() => {
-  const parrafo = document.getElementById("mensaje")
-  parrafo.style.display =(parrafo.style.display ==='none')?
-  'block' : 'none';
-
-},5000)
-
+  const parrafo = document.getElementById("mensaje");
+  parrafo.style.display = (parrafo.style.display === 'none') ? 'block' : 'none';
+}, 5000);
