@@ -1,41 +1,98 @@
- <!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linktree Redes Sociales</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b1b">
+  <meta name="description" content="Encuentra las redes sociales, proyectos y contenido de Xavii JR Jaramillo.">
+  <meta property="og:title" content="Xavii JR Jaramillo | Mis redes">
+  <meta property="og:description" content="Mis redes sociales, proyectos y contenido tecnológico en un solo lugar.">
+  <title>Xavii JR Jaramillo | Mis redes</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+  <script src="app.js" defer></script>
 </head>
 <body>
- 
-  <div class="container">
-    <h1 id="title" class="title">Mis Redes </h1>
-    <p class="texto"> XAVII JR jaramillo JR<br><br> seguime!!!!!</p>
-    <p id="mensaje">!toca la pantalla!¡</p>
-    <div class="links">
-      <a id="face"  href="https://www.facebook.com/share/1E7m7FaVue/"  target="_blank" class="link facebook">
-        <i class="fab fa-facebook-f"></i> Facebook
-      </a>
-      <a id="insta" href="https://www.instagram.com/javierjaramillo2006" target="_blank" class="link instagram">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a id="yt" href="https://youtube.com/@javierrosales5157 " target="_blank" class="link youtube">
-        <i class="fab fa-youtube"></i> YouTube
-      </a>
-      <a id="tikt" href="https://tiktok.com/@xavierr_53 " target="_blank" class="link tiktok">
-        <i class="fab fa-tiktok"></i> TikTok
-      </a>
-      <a id="link" href="https://www.linkedin.com/in/javier-jaramillo-a8046034b" target="_blank" class="link linkedin">
-        <i class="fab fa-linkedin-in"></i> LinkedIn
-      </a>
-      
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio"><span class="brand-mark">X</span><span>XAVII<span class="brand-muted">.JARA</span></span></a>
+    <div class="top-actions">
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema"><span id="theme-icon">☼</span></button>
+      <button class="icon-button" id="share-button" type="button" aria-label="Compartir perfil" title="Compartir perfil">↗</button>
     </div>
+  </header>
 
-  </div>
-     <div class="heart"></div>
-    <div class="hearts-container"></div>
-    <script src="app.js"></script>
+  <main id="inicio" class="page-shell">
+    <section class="hero glass-panel" aria-labelledby="profile-name">
+      <div class="status-pill"><span class="status-dot"></span> EN LÍNEA · EXPLORANDO IDEAS</div>
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar" aria-label="Avatar de Xavii JR">XJ</div>
+        <span class="avatar-badge" title="Perfil personal">✦</span>
+      </div>
+      <p class="eyebrow">ESPACIO DIGITAL</p>
+      <h1 id="profile-name">XAVII <span>JR JARAMILLO</span></h1>
+      <p class="hero-description">Tecnología, desarrollo web y creatividad digital.<br>La nueva forma de ver el mundo tecnologico </p>
+      <div class="hero-tags"><span>#Web</span><span>#Technology</span><span>#Innovation</span></div>
 
+      <div class="social-list" id="social-links" aria-label="Redes sociales">
+        <a class="social-link facebook" data-link-id="facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon" aria-hidden="true">f</span><span class="social-label">Facebook</span><span class="link-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-link instagram" data-link-id="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon instagram-glyph" aria-hidden="true">◎</span><span class="social-label">Instagram</span><span class="link-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-link youtube" data-link-id="youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon play-glyph" aria-hidden="true">▶</span><span class="social-label">YouTube</span><span class="link-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-link tiktok" data-link-id="tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon" aria-hidden="true">♪</span><span class="social-label">TikTok</span><span class="link-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-link linkedin" data-link-id="linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon linkedin-glyph" aria-hidden="true">in</span><span class="social-label">LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="hero-footer">
+        <button class="text-button" id="copy-button" type="button"><span aria-hidden="true">▣</span> Copiar enlace del perfil</button>
+        <span class="footer-separator">·</span>
+        <span class="tiny-note">Un clic, todo conectado.</span>
+      </div>
+      <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="projects-section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">LO QUE ESTOY CONSTRUYENDO</p><h2 id="projects-title">Proyectos <span>destacados</span></h2></div>
+        <a class="github-link" id="github-profile" href="https://github.com/javier-jara20" target="_blank" rel="noopener noreferrer">Ver GitHub <span>↗</span></a>
+      </div>
+      <div class="project-grid" id="project-grid">
+        
+      </div>
+    </section>
+
+    <section class="stats-section glass-panel" aria-labelledby="stats-title">
+      <div class="stats-copy"><p class="eyebrow">TU ACTIVIDAD EN ESTE DISPOSITIVO</p><h2 id="stats-title">Pequeñas <span>estadísticas</span></h2><p>Estos datos se guardan solo en este navegador. No representan visitas globales.</p></div>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="stat-icon">↗</span><strong id="total-clicks">0</strong><span>Clics registrados</span></div>
+        <div class="stat-card"><span class="stat-icon">◎</span><strong id="top-link">—</strong><span>Enlace más visitado</span></div>
+      </div>
+      <button id="reset-stats" class="reset-button" type="button">Restablecer estadísticas</button>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-logo">XAVII<span>.JARA</span></div>
+      <p>Diseñado con <span class="heart">♥</span> y código.</p>
+      <p class="copyright">© <span id="year"></span> Xavii JR Jaramillo · Hecho para explorar.</p>
+    </footer>
+  </main>
+  <noscript><p class="noscript">Activa JavaScript para usar el tema, las partículas y las estadísticas de clics.</p></noscript>
 </body>
-</html> 
+</html>
